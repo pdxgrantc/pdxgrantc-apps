@@ -2,38 +2,20 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
+import { signInWithGoogle, signOutProvider } from '../../../service/firebase';
+
 import firebase from 'firebase/compat/app'
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
+import { getAuth } from "firebase/auth";
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-firebase.initializeApp({
-    apiKey: "AIzaSyCD_-9ryz2E4RRouaxeE1bKOl6xoPZVIwY",
-    authDomain: "shopping-list-f4612.firebaseapp.com",
-    projectId: "shopping-list-f4612",
-    storageBucket: "shopping-list-f4612.appspot.com",
-    messagingSenderId: "492725925529",
-    appId: "1:492725925529:web:c0865252c5de8645572a08"
-});
-
-const auth = firebase.auth();
-const firestore = firebase.firestore();
+const auth = getAuth();
 
 export default function DesktopHeader() {
     const [user] = useAuthState(auth);
-
-    const signIn = () => {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        auth.signInWithPopup(provider);
-    }
-
-    const signOut = () => {
-        if (user) {
-            auth.signOut();
-        }
-    }
 
     return (
         <div class="flex justify-between">
@@ -44,9 +26,9 @@ export default function DesktopHeader() {
                     <h2 class="h-fit align-middle px-[1.5vw] py-[.5vw] hover:bg-button_pressed_color hover:ease-in-out duration-[350ms]">Account</h2>
                     <section>
                         {user ?
-                            <h2 onClick={signOut} class="h-fit align-middle bg-button_accent_color hover:bg-transparent px-[1.5rem] mr-[0rem] py-[.5rem]">Logout</h2>
+                            <h2 onClick={signOutProvider} class="h-fit align-middle bg-button_accent_color hover:bg-transparent px-[1.5rem] mr-[0rem] py-[.5rem]">Logout</h2>
                             :
-                            <h2 onClick={signIn} class="h-fit align-middle bg-button_accent_color hover:bg-transparent px-[1.5rem] mr-[0rem] py-[.5rem]">Login</h2>
+                            <h2 onClick={signInWithGoogle} class="h-fit align-middle bg-button_accent_color hover:bg-transparent px-[1.5rem] mr-[0rem] py-[.5rem]">Login</h2>
                         }
                     </section>
                 </div>
@@ -54,8 +36,4 @@ export default function DesktopHeader() {
             </div>
         </div>
     )
-}
-
-function sign_in() {
-
 }
