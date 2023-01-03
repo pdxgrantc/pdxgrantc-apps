@@ -59,7 +59,7 @@ function Friends() {
             <div class="text-[1.5rem]">
                 <YourFriends />
                 <div class="h-[.75vh]"></div>
-                <h4 class="w-fit text-2xl border-b-[1.5px] on_desktop:hover:bg-button_accent_color on_desktop:hover:ease-[cubic-bezier(0.4, 0, 1, 1)] on_desktop:duration-[350ms] on_desktop:hover:px-[1.25vw] py-[.5vh]">Find Friends</h4>
+                <h4 class="cursor-pointer w-fit text-2xl border-b-[1.5px] on_desktop:hover:bg-button_accent_color on_desktop:hover:ease-[cubic-bezier(0.4, 0, 1, 1)] on_desktop:duration-[350ms] on_desktop:hover:px-[1.25vw] py-[.5vh]">Find Friends</h4>
             </div>
         </div>
     )
