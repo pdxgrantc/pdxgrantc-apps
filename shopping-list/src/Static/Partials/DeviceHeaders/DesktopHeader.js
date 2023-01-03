@@ -13,8 +13,7 @@ export default function DesktopHeader() {
             <Link class="w-[20vw] bg-black pl-[3vw] text-[3.75rem] font-bold leading-[5.75rem] h-[10vh] cursor-pointer whitespace-nowrap" to="/">Ez Shop</Link>
             <div class="flex text-[2.75rem] font-semibold">
                 <div class="flex h-[85%] cursor-pointer over:ease-in-out duration-[350ms]">
-                    <Link class="h-fit align-middle px-[1.5vw] py-[.5vw] hover:bg-button_pressed_color hover:ease-in-out duration-[350ms]" to="/My-Lists">My Lists</Link>
-                    <h2 class="h-fit align-middle px-[1.5vw] py-[.5vw] hover:bg-button_pressed_color hover:ease-in-out duration-[350ms]">Account</h2>
+                    <Link class="h-fit align-middle px-[1.5vw] py-[.5vw] hover:bg-button_pressed_color hover:ease-in-out duration-[350ms]" to="/My-Lists">Your Lists</Link>
                     <section>
                         {user ? <SignOutComponent /> : <SignInComponent />}
                     </section>
