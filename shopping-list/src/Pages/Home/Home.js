@@ -65,7 +65,7 @@ function SignedOut() {
     }
     return (
         <>
-            <div class="px-[5vw] py-[8vh] w-fit mx-auto h-[95%] bg-black">
+            <div class="px-[5vw] vertical py-[12vh] w-fit mx-auto h-[90%] bg-black">
                 <div>
                     <h2 class="text-[3.25rem] text-center">You must be signed in</h2>
                     <h2 class="text-[3.25rem] text-center">to Google to use this app</h2>

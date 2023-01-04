@@ -76,3 +76,5 @@ function YourFriends() {
         </div>
     )
 }
+
+// autocomplete https://www.telerik.com/blogs/quick-guide-dropdown-menus-react
