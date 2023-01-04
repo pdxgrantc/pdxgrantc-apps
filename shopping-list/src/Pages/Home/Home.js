@@ -65,9 +65,15 @@ function SignedOut() {
     }
     return (
         <>
-            <div class="px-[10vw] py-[8vh] w-[90%] mx-auto h-[95%] bg-black">
-                <h2 class="text-[3.25rem]">You must be signed in to Google to use this app</h2>
-                <button onClick={signInWithGoogle}>Sign In</button>
+            <div class="px-[5vw] py-[8vh] w-fit mx-auto h-[95%] bg-black">
+                <div>
+                    <h2 class="text-[3.25rem] text-center">You must be signed in</h2>
+                    <h2 class="text-[3.25rem] text-center">to Google to use this app</h2>
+                </div>
+                <div class="h-[9vh]"></div>
+                <div class="m-auto w-fit">
+                    <button class="m-auto cursor-pointer w-fit text-[2.75rem] border-b-[1.5px] on_desktop:hover:bg-button_accent_color on_desktop:hover:ease-[cubic-bezier(0.4, 0, 1, 1)] on_desktop:duration-[350ms] on_desktop:hover:px-[2.75vw] py-[.4vh] w-fit align-middle" onClick={signInWithGoogle}>Sign In With Google</button>
+                </div>
             </div>
         </>
     )
