@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { auth } from '../../../firebase'
+import { auth, SignInComponent, SignOutComponent } from '../../../Firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
-
-import { SignInComponent, SignOutComponent } from '../../../firebase'
 
 export default function DesktopHeader() {
     const [user] = useAuthState(auth);
